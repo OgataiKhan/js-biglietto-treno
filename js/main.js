@@ -12,10 +12,14 @@ const basePrice = parseFloat(journeyLength) * 0.21;
 
 // 4. We'll introduce conditional discounts for passengers that are minors or over 65s
 
-let finalPrice = basePrice;
+let discountedPrice = basePrice;
 
 if (passengerAge < 18) {
-    finalPrice = basePrice * 0.8;
+    discountedPrice = basePrice * 0.8;
 } else if (passengerAge >= 65) {
-    finalPrice = basePrice * 0.6;
+    discountedPrice = basePrice * 0.6;
 }
+
+// 5. We'll limit the result to two decimal places by using toFixed(2)
+
+const finalPrice = discountedPrice.toFixed(2);
