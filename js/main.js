@@ -23,3 +23,12 @@ if (passengerAge < 18) {
 // 5. We'll limit the result to two decimal places by using toFixed(2)
 
 const finalPrice = discountedPrice.toFixed(2);
+
+// 6. We'll use Number.isFinite() to check whether our final result is a finite number (excluding strings, Infinity, -Infinity, and NaN)
+// 7. If so, we are going to output the final price into the console and into the html document
+
+if (Number.isFinite(parseFloat(finalPrice))) {
+    console.log(`The final price is ${finalPrice}€`);
+} else {
+    console.log('The script encountered an error. Please reload the page.');
+}
