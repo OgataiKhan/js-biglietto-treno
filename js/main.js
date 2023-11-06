@@ -29,6 +29,8 @@ const finalPrice = discountedPrice.toFixed(2);
 
 if (Number.isFinite(parseFloat(finalPrice))) {
     console.log(`The final price is ${finalPrice}€`);
+    document.getElementById('price').innerHTML = `${finalPrice}€`;
 } else {
     console.log('The script encountered an error. Please reload the page.');
+    document.getElementById('price').innerHTML = 'Si è verificato un errore, riprova';
 }
