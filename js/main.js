@@ -29,7 +29,7 @@ const finalPrice = discountedPrice.toFixed(2);
 // 6. We'll use Number.isFinite() to check whether our final result is a finite number (excluding Infinity, -Infinity, and NaN). Note that the output of toFixed() is always a string, so we need to convert it into a number again first.
 // 7. If so, we are going to output the final price into the console and into the html document
 
-if (Number.isFinite(parseFloat(finalPrice))) {
+if (Number.isFinite(discountedPrice)) {
     console.log(`The final price is ${finalPrice}€`);
     document.getElementById('price').innerHTML = `${finalPrice}€`;
 } else {
